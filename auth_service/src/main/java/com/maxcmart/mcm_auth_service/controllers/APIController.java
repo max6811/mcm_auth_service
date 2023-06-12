@@ -18,10 +18,6 @@ public class APIController {
 
     @GetMapping
     public Map<String, Object>  currentUser(OAuth2AuthenticationToken oAuth2AuthenticationToken){
-        System.out.println("TTTTOOOOOO:" + oAuth2AuthenticationToken);
-        System.out.println("TTTTOOOOOO:" + oAuth2AuthenticationToken.getPrincipal().getAttributes());
-        System.out.println("TTTTOOOOOO:" + oAuth2AuthenticationToken.getPrincipal().getAuthorities());
-        System.out.println("TTTTOOOOOO:" + oAuth2AuthenticationToken.getCredentials().toString());
         return oAuth2AuthenticationToken.getPrincipal().getAttributes();
     }
     @GetMapping(value = "/public")
